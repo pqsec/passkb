@@ -12,6 +12,6 @@ go get github.com/pqsec/passkb/cmd/passkb
 ```
 The `passkb` binary should appear in your `$GOPATH/bin` directory.
 
-Currently works on Linux and Windows only.
+Works on Linux, Windows and MacOS (on MacOS *Command Line Tools for Xcode* are needed to compile the binary).
 
 [ncsc-let-paste]: https://www.ncsc.gov.uk/blog-post/let-them-paste-passwords
