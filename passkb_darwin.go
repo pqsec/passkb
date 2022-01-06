@@ -41,6 +41,7 @@ func (kb macKeyboard) Type(str string, delay time.Duration) error {
 	events := make([]C.CGEventRef, 2*len(str))
 
 	for i, r := range str {
+		i := i
 		events[2*i] = C.cgeventcreatekeyboardevent(C.ushort(r), true)
 		if events[2*i] == 0 {
 			return fmt.Errorf("Cannot create a key down event for %v", r)
