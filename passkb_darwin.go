@@ -5,6 +5,8 @@ package passkb
 #cgo LDFLAGS: -framework Cocoa
 #import <Foundation/Foundation.h>
 
+#include <ApplicationServices/ApplicationServices.h>
+
 CGEventRef cgeventcreatekeyboardevent(unsigned short c, bool down) {
 	// real key code does not matter as we are overriding with CGEventKeyboardSetUnicodeString
 	CGEventRef cf = CGEventCreateKeyboardEvent(NULL, 0, down);
